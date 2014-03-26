@@ -1,0 +1,13 @@
+Thumbs.db
+.DS_Store
+.sass-cache
+*.gem
+*.rbc
+.bundle
+.config
+.yardoc
+Gemfile.lock
+*.orig
+node_modules
+.npm-debug.log
+npm-debug.log
