@@ -24,15 +24,15 @@ module.exports = (grunt)->
         options:
           atBegin: true
 
-    clean: ['preview/**/*.*']
+    clean: ['build/**/*.*']
 
     copy:
       html:
         files: [{
           expand: true
-          cwd: 'src/'
-          src: ['html/**/*.html']
-          dest: 'preview/'
+          cwd: 'src/html'
+          src: ['**/*.html']
+          dest: 'build/'
         }]
 
       assets:
@@ -40,14 +40,14 @@ module.exports = (grunt)->
           expand: true
           cwd: 'assets/'
           src: ['imgs/**/*.*']
-          dest: 'preview/'
+          dest: 'build/'
         }]
 
     connect:
       server:
         options:
           port: 8000
-          base: 'preview'
+          base: 'build'
           keepalive: true
 
   })
