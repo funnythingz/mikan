@@ -6,7 +6,7 @@ module.exports = (grunt)->
   grunt.loadNpmTasks('grunt-contrib-clean')
   grunt.loadNpmTasks('grunt-contrib-copy')
 
-  grunt.registerTask('default', ['clean', 'compass'])
+  grunt.registerTask('default', ['clean', 'compass', 'copy'])
   grunt.registerTask('preview', ['clean', 'compass', 'copy', 'connect'])
 
   grunt.initConfig({
@@ -19,7 +19,7 @@ module.exports = (grunt)->
 
     watch:
       css:
-        files: ['scss/**/*.scss']
+        files: ['src/scss/**/*.scss']
         tasks: ['compass']
         options:
           atBegin: true
@@ -30,7 +30,7 @@ module.exports = (grunt)->
       html:
         files: [{
           expand: true
-          cwd: 'src/html'
+          cwd: 'src/html/'
           src: ['**/*.html']
           dest: 'build/'
         }]
