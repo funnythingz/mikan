@@ -1,13 +1,15 @@
-@-webkit-keyframes _fadeout {
-  0% {
-    opacity: 1.0;
-  }
-  99% {
-    opacity: 0;
-  }
-  100% {
-    display: none;
-  }
+@mixin fadeoutKeyframe {
+  @-webkit-keyframes _fadeout {
+    0% {
+      opacity: 1.0;
+    }
+    99% {
+      opacity: 0;
+    }
+    100% {
+      display: none;
+    }
+}
 }
 @mixin fadeout {
   @include experimental(animation-name, _fadeout);

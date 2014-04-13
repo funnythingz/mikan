@@ -1,12 +1,14 @@
-@-webkit-keyframes _zoomout {
-  0% {
-    @include experimental(-webkit-transform, scale(1.0));
-  }
-  99% {
-    @include experimental(-webkit-transform, scale(0.5));
-  }
-  100% {
-    display: none;
+@mixin zoomoutKeyframe {
+  @-webkit-keyframes _zoomout {
+    0% {
+      @include experimental(transform, scale(1.0));
+    }
+    99% {
+      @include experimental(transform, scale(0.5));
+    }
+    100% {
+      display: none;
+    }
   }
 }
 @mixin zoomout {
@@ -17,6 +19,6 @@
   @include experimental(animation-timing-function, ease-out);
   @include experimental(animation-delay, 0s);
 
-  @include experimental(-webkit-transform, scale(1));
+  @include experimental(transform, scale(1));
   display: none;
 }

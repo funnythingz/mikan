@@ -1,11 +1,13 @@
-@-webkit-keyframes _zoomin {
-  0% {
-    @include experimental(-webkit-transform, scale(0.9));
-    opacity: 0.5;
-  }
-  100% {
-    @include experimental(-webkit-transform, scale(1.0));
-    opacity: 1.0;
+@mixin zoominKeyframe {
+  @-webkit-keyframes _zoomin {
+    0% {
+      @include experimental(transform, scale(0.9));
+      opacity: 0.5;
+    }
+    100% {
+      @include experimental(transform, scale(1.0));
+      opacity: 1.0;
+    }
   }
 }
 @mixin zoomin {
@@ -16,6 +18,6 @@
   @include experimental(animation-timing-function, ease-in);
   @include experimental(animation-delay, 0s);
 
-  @include experimental(-webkit-transform, scale(1.0));
+  @include experimental(transform, scale(1.0));
   opacity: 1.0;
 }
