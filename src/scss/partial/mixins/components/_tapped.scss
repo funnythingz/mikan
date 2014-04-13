@@ -1,0 +1,21 @@
+@import "../../animation/core";
+
+@include keyframes(_tapped) {
+  0% {
+    //color: #{$status_normalColor};
+    background-color: transparent;
+  }
+  100% {
+    //color: #{$cassette_tappedColor};
+    background-color: #{$cassette_tappedBackgroundColor};
+  }
+}
+
+@mixin tapped {
+  background-color: #{$cassette_tappedBackgroundColor};
+  @include animation(_tapped 0.1s ease-in);
+}
+
+.tapped {
+  @include tapped;
+}

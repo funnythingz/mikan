@@ -1,0 +1,41 @@
+%_display {
+  display: table-cell;
+}
+
+@mixin wrap-icon($_size){
+  > .#{$class_wrap-icon}#{$_size} {
+    width: #{$_size + $spacingInner}px;
+    @extend %_display;
+    @include left;
+  }
+}
+
+.#{$class_flexible} {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  > .#{$class_item} {
+    @extend %_display;
+    vertical-align: top;
+    @include left;
+  }
+  > .#{$class_item-caret} {
+    @extend %_display;
+    vertical-align: middle;
+    @include right;
+    width: 18px;
+  }
+  > .#{$class_item-button} {
+    @extend %_display;
+    vertical-align: middle;
+    @include right;
+    width: 6em;
+  }
+  @include wrap-icon(84);
+  @include wrap-icon(72);
+  @include wrap-icon(60);
+  @include wrap-icon(48);
+  @include wrap-icon(36);
+  @include wrap-icon(24);
+}
