@@ -24,6 +24,12 @@ module.exports = (grunt)->
         options:
           atBegin: true
 
+      html:
+        files: ['src/html/**/*.html']
+        tasks: ['copy:html']
+        options:
+          atBegin: true
+
     clean: ['build/**/*.*']
 
     copy:
