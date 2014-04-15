@@ -8,4 +8,11 @@
 
 @import "partial/mixins/all";
 
-//@import "partial/base/all";
+@import "partial/base/all";
+
+.hoge {
+  width: 400px;
+  padding: 50px;
+  border: solid 10px #000;
+  background-color: #ff0;
+}
