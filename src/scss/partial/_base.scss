@@ -24,6 +24,22 @@ body {
   @extend %color;
 }
 
+.headline {
+  @extend %sentence;
+  @extend %large;
+  background-color: #85c329;
+  border-bottom: solid 1px #393;
+  padding: 8px;
+
+  &:first-child {
+    @include border-top-radius(5px 5px);
+  }
+
+  &:last-child {
+    @include border-bottom-radius(5px 5px);
+  }
+}
+
 .sentence {
   @extend %sentence;
   @extend %medium;
