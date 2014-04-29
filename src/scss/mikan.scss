@@ -2,17 +2,6 @@
 
 @import "compass/css3";
 
-@import "themes/mikan/all";
-
-@import "partial/functions/all";
-
-@import "partial/mixins/all";
-
-@import "partial/base/all";
-
-.hoge {
-  width: 400px;
-  padding: 50px;
-  border: solid 10px #000;
-  background-color: #ff0;
-}
+@import "partial/base";
+@import "partial/cassette";
+@import "partial/flex";
