@@ -1,0 +1,42 @@
+%cassette {
+
+    &:first-child {
+      @include border-radius(5px 5px 0 0);
+    }
+
+    &:last-child {
+      @include border-radius(0 0 5px 5px);
+    }
+
+    .in {
+      padding: 8px;
+    }
+}
+
+.unit {
+  padding: 8px;
+}
+
+.collection {
+
+  background-color: #ffbf23;
+  @include border-radius(5px);
+
+  .head {
+    @extend %cassette;
+    background-color: #85c329;
+    border-bottom: solid 1px #393;
+  }
+
+  .cassette {
+    @extend %cassette;
+    border-bottom: solid 1px #ff9523;
+  }
+
+  .foot {
+    @extend %cassette;
+    background-color: #feec30;
+    border-bottom: solid 1px #feec30;
+  }
+
+}

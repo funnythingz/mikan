@@ -1,0 +1,41 @@
+@import "compass/reset";
+
+%color {
+  color: #066;
+}
+%minor {
+  color: #007d08;
+}
+%medium {
+  font-size: 14px;
+}
+%large {
+  font-size: 16px;
+}
+%small {
+  font-size: 12px;
+}
+%sentence {
+  line-height: 1.5;
+}
+
+body {
+  background-color: #fff;
+  @extend %color;
+}
+
+.sentence {
+  @extend %sentence;
+  @extend %medium;
+}
+.large {
+  @extend %sentence;
+  @extend %large;
+}
+.small {
+  @extend %sentence;
+  @extend %small;
+}
+.minor {
+  @extend %minor;
+}

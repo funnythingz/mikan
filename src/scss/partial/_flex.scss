@@ -1,0 +1,46 @@
+%item {
+  display: table-cell;
+  vertical-align: top;
+}
+
+@mixin icon($size) {
+  @extend %item;
+  width: #{$size}px;
+  padding-right: 8px;
+
+  > .icon {
+    width: #{$size}px;
+    height: #{$size}px;
+    @include background-size(#{$size}px #{$size}px);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+}
+
+
+.flex {
+
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+
+  > .item {
+    @extend %item;
+  }
+
+  > .item-icon24 {
+    @include icon(24);
+  }
+
+  > .item-icon32 {
+    @include icon(32);
+  }
+
+  > .item-icon48 {
+    @include icon(48);
+  }
+
+  > .item-icon72 {
+    @include icon(72);
+  }
+}
