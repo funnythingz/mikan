@@ -1,0 +1,14 @@
+/**
+ * .hoge {
+ *   @include transparent('background-color', #000, 0.5);
+ * }
+ */
+
+@mixin transparent($attribute, $color, $alpha) {
+  $rgba: rgba($color, $alpha);
+  $ie-hex-str: ie-hex-str($rgba);
+  #{$attribute}: transparent;
+  #{$attribute}: $rgba;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+  zoom: 1;
+}
