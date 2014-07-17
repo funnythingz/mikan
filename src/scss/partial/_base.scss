@@ -1,57 +1,8 @@
 @import "compass/reset";
 
-%color {
-  color: #066;
-}
-%minor {
-  color: #007d08;
-}
-%medium {
-  font-size: 14px;
-}
-%large {
-  font-size: 16px;
-}
-%small {
-  font-size: 12px;
-}
-%sentence {
-  line-height: 1.5;
-}
+@import "typography";
 
 body {
   background-color: #fff;
-  @extend %color;
-}
-
-.headline {
-  @extend %sentence;
-  @extend %large;
-  background-color: #85c329;
-  border-bottom: solid 1px #393;
-  padding: 8px;
-
-  &:first-child {
-    @include border-top-radius(5px 5px);
-  }
-
-  &:last-child {
-    @include border-bottom-radius(5px 5px);
-  }
-}
-
-.sentence {
-  @extend %sentence;
-  @extend %medium;
-}
-.large {
-  @extend %sentence;
-  @extend %large;
-}
-.small {
-  @extend %sentence;
-  @extend %small;
-}
-.minor {
-  @extend %minor;
+  @extend %_color;
 }

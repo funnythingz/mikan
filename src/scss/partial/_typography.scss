@@ -1,0 +1,50 @@
+@include typographyModule;
+ 
+.sentence {
+  @extend %_sentence, %_font-size-default;
+}
+.huge {
+  @extend %_sentence, %_font-size-huge;
+}
+.large {
+  @extend %_sentence, %_font-size-large;
+}
+.small {
+  @extend %_sentence, %_font-size-small;
+}
+.tiny {
+  @extend %_sentence, %_font-size-tiny;
+}
+ 
+.heading1 {
+  @extend %_sentence, %_font-size-huge, %_strong;
+  border-left: 3px solid #789;
+  padding-left: 10px;
+}
+.heading2 {
+  @extend %_sentence, %_font-size-large, %_strong;
+  border-bottom: 1px solid #789;
+  padding: 2px 0;
+}
+.heading3 {
+  @extend %_sentence, %_font-size-default, %_strong;
+}
+
+.headline {
+  @extend %_sentence, %_font-size-large;
+  background-color: #85c329;
+  border-bottom: solid 1px #393;
+  padding: 8px;
+
+  &:first-child {
+    @include border-top-radius(5px 5px);
+  }
+
+  &:last-child {
+    @include border-bottom-radius(5px 5px);
+  }
+}
+
+.minor {
+  @extend %_minor;
+}
