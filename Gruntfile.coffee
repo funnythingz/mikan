@@ -1,10 +1,6 @@
 module.exports = (grunt)->
 
-  grunt.loadNpmTasks('grunt-contrib-compass')
-  grunt.loadNpmTasks('grunt-contrib-watch')
-  grunt.loadNpmTasks('grunt-contrib-connect')
-  grunt.loadNpmTasks('grunt-contrib-clean')
-  grunt.loadNpmTasks('grunt-contrib-copy')
+  require('load-grunt-tasks')(grunt)
 
   grunt.registerTask('default', ['clean', 'compass', 'copy'])
   grunt.registerTask('preview', ['clean', 'compass', 'copy', 'connect'])
