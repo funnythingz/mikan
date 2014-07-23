@@ -44,7 +44,25 @@
   %_color {
     color: #066;
   }
+
   %_minor {
     color: #007d08;
   }
+
+  %_huge {
+    @extend %_sentence, %_font-size-huge;
+  }
+
+  %_large {
+    @extend %_sentence, %_font-size-large;
+  }
+
+  %_small {
+    @extend %_sentence, %_font-size-small;
+  }
+
+  %_tiny {
+    @extend %_sentence, %_font-size-tiny;
+  }
+
 }

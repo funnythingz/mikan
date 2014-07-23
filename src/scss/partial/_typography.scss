@@ -4,25 +4,25 @@
   @extend %_sentence, %_font-size-default;
 }
 .huge {
-  @extend %_sentence, %_font-size-huge;
+  @extend %_huge;
 }
 .large {
-  @extend %_sentence, %_font-size-large;
+  @extend %_large;
 }
 .small {
-  @extend %_sentence, %_font-size-small;
+  @extend %_small;
 }
 .tiny {
-  @extend %_sentence, %_font-size-tiny;
+  @extend %_tiny;
 }
  
 .heading1 {
-  @extend %_sentence, %_font-size-huge, %_strong;
+  @extend %_huge, %_strong;
   border-left: 3px solid #789;
   padding-left: 10px;
 }
 .heading2 {
-  @extend %_sentence, %_font-size-large, %_strong;
+  @extend %_large, %_strong;
   border-bottom: 1px solid #789;
   padding: 2px 0;
 }
@@ -31,7 +31,7 @@
 }
 
 .headline {
-  @extend %_sentence, %_font-size-large;
+  @extend %_large;
   background-color: #85c329;
   border-bottom: solid 1px #393;
   padding: 8px;
